@@ -12,10 +12,14 @@ public class LoginTest {
   @Test
   public void test_login_with_incorrect_credentials(){
 
+    System.setProperty("webdriver.chrome.verboseLogging", "true");
+System.setProperty("webdriver.chrome.logfile", "/tmp/chromedriver.log");
     ChromeOptions options = new ChromeOptions();
-    // options.addArguments("--headless");
+    options.addArguments("--headless");
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--disable-gpu");  
+    options.addArguments("--window-size=1920,1080");
 
     WebDriver driver = new ChromeDriver(options);
         
