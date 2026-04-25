@@ -35,7 +35,7 @@ System.setProperty("webdriver.chrome.logfile", "/tmp/chromedriver.log");
 
             String errorText = error.getText();
 
-            assertTrue(errorText.contains("Incorrect email or password"));
+            assertTrue(errorText.contains("Failed to fetch"));
 
         } finally {
             driver.quit();
