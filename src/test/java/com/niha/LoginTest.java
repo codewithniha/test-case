@@ -31,23 +31,18 @@ System.setProperty("webdriver.chrome.logfile", "/tmp/chromedriver.log");
       driver.get("http://103.139.122.250:4000/");
 
       driver.findElement(By.id("email")).sendKeys("qasim@malik.com");
-<<<<<<< HEAD
-      driver.findElement(By.id("password")).sendKeys("abcdefg");
-      driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/form/button")).click();
-=======
+
             driver.findElement(By.id("password")).sendKeys("abcdefg");
            driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/form/button")).click();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
->>>>>>> d98f08071b9aac25b7b27d5b16eb1ea3daf24226
+
       WebElement error = driver.findElement(By.xpath("//form//div[1]"));
 
       String errorText = error.getText();
 
-<<<<<<< HEAD
-      assertTrue(errorText.contains("Incorrect email or password"));
-=======
+
             assertTrue(errorText.contains("Failed to fetch"));
->>>>>>> d98f08071b9aac25b7b27d5b16eb1ea3daf24226
+
 
     } finally {
       driver.quit();
