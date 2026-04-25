@@ -2,7 +2,7 @@ package com.niha;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
