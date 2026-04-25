@@ -30,7 +30,8 @@ System.setProperty("webdriver.chrome.logfile", "/tmp/chromedriver.log");
       driver.findElement(By.id("email")).sendKeys("qasim@malik.com");
             driver.findElement(By.id("password")).sendKeys("abcdefg");
            driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/form/button")).click();
-            WebElement error = driver.findElement(By.xpath("//form//div[1]"));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      WebElement error = driver.findElement(By.xpath("//form//div[1]"));
 
             String errorText = error.getText();
 
