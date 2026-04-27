@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 public class LoginTest {
 
@@ -41,7 +42,7 @@ public class LoginTest {
         "/html/body/div/div/div[1]/div/div/div/div[2]/form/div[1]")).getText();
 
     // Check that the error message contains the expected text
-    assert (errorText.contains("Incorrect email or password"));
+    assertTrue("Error message not found", errorText.contains("Incorrect email or password"));
 
     // Close the browser
     driver.quit();
